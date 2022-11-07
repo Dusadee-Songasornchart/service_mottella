@@ -3,6 +3,8 @@ export interface User_payment{
     Surname : string;
     Email : string;
     ComfirmEmail :string;
-    Number : string;
+    Phone : string;
+    smoke : boolean;
+    double_bed : boolean;
 
 }

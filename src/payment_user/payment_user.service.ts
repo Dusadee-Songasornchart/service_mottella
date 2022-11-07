@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CreatePayment_user } from 'src/dto/paymentdto';
+import {  CreatePayment_user_DTO } from 'src/dto/paymentdto';
 import { User_payment } from 'src/types/User';
 
 
@@ -7,18 +7,20 @@ import { User_payment } from 'src/types/User';
 export class PaymentUserService {
     private allpayment: User_payment[] = [
         {
-            Name : 'John',
-            Surname : 'Smith',
-            Email : 'John.sm@gmail.com',
-            ComfirmEmail : 'John.sm@gmail.com',
-            Number : '0857868444'
+            Name : 'itipi',
+            Surname : 'so',
+            Email : 'du@gmail.com',
+            ComfirmEmail : 'itipiso@gmail.com',
+            Phone : '0887987871',
+            smoke : true,
+            double_bed : true
         }
 
     ];
     findAll(): User_payment[]{
         return this.allpayment;
     }
-    postinfo(Payment_reserve : CreatePayment_user){
+    postinfo(Payment_reserve : CreatePayment_user_DTO){
         this.allpayment.push(Payment_reserve);
     }
     
